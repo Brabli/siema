@@ -536,7 +536,7 @@ export default class Siema {
    * check if an element is or is inside an anchor tag
    */
   insideAnchor(elem) {
-    var value = false;
+    let value = false;
 
     do {
       value = elem.nodeName === 'A';
