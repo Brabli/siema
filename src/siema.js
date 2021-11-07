@@ -540,7 +540,7 @@ export default class Siema {
 
     do {
       value = elem.nodeName === 'A';
-    } while (!value && (elem = elem.parentNode))
+    } while (!value && (elem = elem.parentNode));
 
     return value;
   }
