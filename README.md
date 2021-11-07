@@ -50,8 +50,10 @@ new Siema({
   selector: '.siema',
   duration: 200,
   easing: 'ease-out',
+  center: false,
   perPage: 1,
   startIndex: 0,
+  offset: 1,
   draggable: true,
   multipleDrag: true,
   threshold: 20,
@@ -62,80 +64,80 @@ new Siema({
 });
 ```
 
-**`selector`** (string or DOM element)  
+**`selector`** (string or DOM element)
 The selector to use as a carousel. Siema will use all immediate children of this selector as a slider items. It can be a query string [(example)](http://codepen.io/pawelgrzybek/pen/QvLjxY) or DOM element [(example)](http://codepen.io/pawelgrzybek/pen/gWYaje).
 
-**`duration`** (number)  
+**`duration`** (number)
 Slide transition duration in milliseconds [(example)](http://codepen.io/pawelgrzybek/pen/BRBoqO).
 
-**`easing`** (string)  
+**`easing`** (string)
 It is like a CSS `transition-timing-function` — describes acceleration curve [(example)](http://codepen.io/pawelgrzybek/pen/aWovrB).
 
-**`center`** (boolean)  
+**`center`** (boolean)
 Determine if slider will be center in the selector or not.  Default: false.
 
-**`perPage`** (number or object)  
+**`perPage`** (number or object)
 The number of slides to be shown. It accepts a number [(example)](http://codepen.io/pawelgrzybek/pen/bWbVXz) or an object [(example)](http://codepen.io/pawelgrzybek/pen/dWbGyZ) for complex responsive layouts.
 
-**`offset`** (number or object)  
-An offset applied on slides width based on items per page.  
-For example, a configuration with perPage = 1 and offset = 0.25 will show in viewport the current slide and 25% of the next slide.  
-With center attribute enable, it will show 25% of the prev slide, the current slide and 25% of the next slide.  
+**`offset`** (number or object)
+An offset applied on slides width based on items per page.
+For example, a configuration with perPage = 1 and offset = 0.25 will show in viewport the current slide and 25% of the next slide.
+With center attribute enable, it will show 25% of the prev slide, the current slide and 25% of the next slide.
 It accepts a number between 0 and 1 and object with value by breakpoint as for **perPage** attribute.
 
-**`startIndex`** (number)  
+**`startIndex`** (number)
 Index (zero-based) of the starting slide [(example)](http://codepen.io/pawelgrzybek/pen/vmBLER).
 
-**`draggable`** (boolean)  
+**`draggable`** (boolean)
 Use dragging and touch swiping [(example)](http://codepen.io/pawelgrzybek/pen/mmbVVj).
 
-**`multipleDrag`** (boolean)  
+**`multipleDrag`** (boolean)
 Allow dragging to move multiple slides.
 
-**`threshold`** (number)  
+**`threshold`** (number)
 Touch and mouse dragging threshold (in px) [(example)](http://codepen.io/pawelgrzybek/pen/gWYPrQ).
 
-**`loop`** (boolean)  
+**`loop`** (boolean)
 Loop the slides around [(example)](http://codepen.io/pawelgrzybek/pen/zwOrKN).
 
-**`rtl`** (boolean)  
+**`rtl`** (boolean)
 Enables layout for languages written from right to left (like Hebrew or Arabic) [(example)](https://codepen.io/pawelgrzybek/pen/XZNEgd).
 
-**`onInit`** (function)  
+**`onInit`** (function)
 Runs immediately after initialization [(example)](http://codepen.io/pawelgrzybek/pen/BRBjpE).
 
-**`onChange`** (function)  
+**`onChange`** (function)
 Runs after slide change [(example)](http://codepen.io/pawelgrzybek/pen/RVbrVe).
 
 ## API
 
 As mentioned above, Siema doesn't come with many options - just a few useful methods. Combine it with some very basic JavaScript and voila!
 
-**`prev(howManySlides = 1, callback)`**  
+**`prev(howManySlides = 1, callback)`**
 Go to previous item [(example)](http://codepen.io/pawelgrzybek/pen/JNPKVE). Optionally slide few items backward by passing `howManySlides` (number) argument [(example)](http://codepen.io/pawelgrzybek/pen/wdwWZQ). Optional `callback` (function) available as a third argument [(example)](http://codepen.io/pawelgrzybek/pen/JNPKQW).
 
-**`next(howManySlides = 1, callback)`**  
+**`next(howManySlides = 1, callback)`**
 Go to next item [(example)](http://codepen.io/pawelgrzybek/pen/JNPKVE). Optionally slide few items forward by passing `howManySlides` (number) argument [(example)](http://codepen.io/pawelgrzybek/pen/wdwWZQ). Optional `callback` (function) available as a third argument [(example)](http://codepen.io/pawelgrzybek/pen/JNPKQW).
 
-**`goTo(index, callback)`**  
+**`goTo(index, callback)`**
 Go to item at particular `index` (number) [(example)](http://codepen.io/pawelgrzybek/pen/gWYLXP). Optional `callback` (function) available as a second argument [(example)](http://codepen.io/pawelgrzybek/pen/ZKzBvo).
 
-**`remove(index, callback)`**  
+**`remove(index, callback)`**
 Remove item at particular `index` (number) [(example)](http://codepen.io/pawelgrzybek/pen/BRBpQJ). Optional `callback` (function) available as a second argument [(example)](http://codepen.io/pawelgrzybek/pen/rmBjjE).
 
-**`insert(item, index, callback)`**  
+**`insert(item, index, callback)`**
 Insert new `item` (DOM element) at specific `index` (number) [(example)](http://codepen.io/pawelgrzybek/pen/QvLdaJ). Optional `callback` (function) available as a third argument [(example)](http://codepen.io/pawelgrzybek/pen/vmBgdZ).
 
-**`prepend(item, callback)`**  
+**`prepend(item, callback)`**
 Prepend new `item` (DOM element) [(example)](http://codepen.io/pawelgrzybek/pen/rmBymW). Optional `callback` (function) available as a second argument [(example)](http://codepen.io/pawelgrzybek/pen/LyPWLe).
 
-**`append(item, callback)`**  
+**`append(item, callback)`**
 Append new `item` (DOM element) [(example)](http://codepen.io/pawelgrzybek/pen/RVbpZe). Optional `callback` (function) available as a second argument [(example)](http://codepen.io/pawelgrzybek/pen/rmByGj).
 
-**`destroy(restoreMarkup = false, callback)`**  
+**`destroy(restoreMarkup = false, callback)`**
 Remove all event listeners on instance [(example)](http://codepen.io/pawelgrzybek/pen/oWvZEd). Use `restoreMarkup` to restore the initial markup inside selector [(example)](http://codepen.io/pawelgrzybek/pen/ZKzeoL). Optional `callback` (function) available as a third argument [(example)](http://codepen.io/pawelgrzybek/pen/Wjepyv).
 
-**`currentSlide`**  
+**`currentSlide`**
 Prints current slide index [(example)](https://codepen.io/pawelgrzybek/pen/XRNOPP).
 
 ## Browser support
