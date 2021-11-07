@@ -563,12 +563,9 @@ export default class Siema {
 
       this.drag.endX = e.pageX;
       this.selector.style.cursor = '-webkit-grabbing';
-<<<<<<< HEAD
       this.sliderFrame.style.webkitTransition = `all 0ms ${this.config.easing}`;
       this.sliderFrame.style.transition = `all 0ms ${this.config.easing}`;
       this.draggedBeyondThreshold = Math.abs(this.drag.startX - this.drag.endX) > this.config.threshold;
-=======
->>>>>>> f290a1ca1dd91002b0ceeeffec7b75fc969d8c58
 
       this.translateSliderFrame();
     }
