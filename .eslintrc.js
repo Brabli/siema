@@ -129,10 +129,6 @@ module.exports = {
       1,
       'always'
     ],
-    'indent': [
-      2,
-      2
-    ],
     'jsx-quotes': [
       2,
       'prefer-double'
